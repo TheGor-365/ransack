@@ -1,15 +1,20 @@
 <div id="<%= dom_id user %>" class="border p-5 m-5 rounded">
-  <p class="text-muted">
-    First name
-  </p>
-  <h5 class="text-success">
-    <%= user.first_name %>
-  </h5>
-
-  <p class="text-muted">
-    Last name
-  </p>
-  <h5 class="text-success">
-    <%= user.last_name %>
-  </h5>
+  <div class="row">
+    <div class="col-3">
+      <p class="text-muted">
+        First name
+      </p>
+      <h5 class="text-success">
+        <%= user.first_name %>
+      </h5>
+    </div>
+    <div class="col">
+      <p class="text-muted">
+        Last name
+      </p>
+      <h5 class="text-success">
+        <%= user.last_name %>
+      </h5>
+    </div>
+  </div>
 </div>
