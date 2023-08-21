@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   def index
-    @users = User.all
+    @search_query = User.ransack(params[:search_query])
+    @users = @search_query.result
   end
 
   def show

@@ -4,8 +4,25 @@
   Users
 </h1>
 
+<div class="card shadow p-5 m-5">
+  <%= search_form_for @search_query, url: root_path do |f| %>
+    <%= f.label :first_name_cont, class: 'form-label' %>
+    <%= f.search_field :first_name_cont, class: 'form-control' %>
+
+    <%= f.label :last_name_cont, class: 'form-label' %>
+    <%= f.search_field :last_name_cont, class: 'form-control' %>
+
+    <%= f.submit class: 'btn btn-sm btn-success my-3' %>
+  <% end %>
+</div>
+
+<div class="text-center">
+  <%= sort_link(@search_query, :first_name, class: 'text-decoration-none text-dark me-3') %>
+  <%= sort_link(@search_query, :last_name, class: 'text-decoration-none text-dark') %>
+</div>
+
 <% @users.each do |user| %>
-  <div class="card shadow p-5 m-5">  
+  <div class="card shadow p-5 m-5">
     <%= render user %>
     <p><%= link_to "Show user", user, class: "btn btn-sm btn-outline-dark my-3" %></p>
   </div>
