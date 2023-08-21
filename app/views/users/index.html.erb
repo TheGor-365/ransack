@@ -6,9 +6,12 @@
 
 <div class="card shadow p-5 m-5">
   <%= search_form_for @search_query, url: root_path do |f| %>
-  
-    <%= f.label :first_name_or_last_name_cont, class: 'form-label' %>
-    <%= f.search_field :first_name_or_last_name_cont, class: 'form-control' %>
+
+    <%= f.label :first_name_cont, class: 'form-label' %>
+    <%= f.search_field :first_name_cont, class: 'form-control' %>
+
+    <%= f.label :last_name_cont, class: 'form-label' %>
+    <%= f.search_field :last_name_cont, class: 'form-control' %>
 
     <%= f.submit class: 'btn btn-sm btn-success my-3' %>
   <% end %>
