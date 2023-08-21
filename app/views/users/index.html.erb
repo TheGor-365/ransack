@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">
+  Users
+</h1>
+
+<% @users.each do |user| %>
+  <div class="card shadow p-5 m-5">  
+    <%= render user %>
+    <p><%= link_to "Show user", user, class: "btn btn-sm btn-outline-dark my-3" %></p>
+  </div>
+<% end %>
+
+<%= link_to "New user", new_user_path, class: "btn btn-sm btn-outline-dark" %>
