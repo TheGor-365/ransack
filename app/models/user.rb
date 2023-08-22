@@ -7,5 +7,5 @@ class User < ApplicationRecord
     []
   end
 
-  ransack_alias :first_or_last_name, :first_name_or_last_name_cont
+  ransack_alias :first_name, :first_name_or_last_name
 end
